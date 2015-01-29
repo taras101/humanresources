@@ -15,8 +15,7 @@ http.createServer(function (req, res) {
     res.writeHead(501, {
       'Content-Type': 'text/plain'
     });
-    return res.end(req.method + ' is not implemented by this 
-➥server.');
+    return res.end(req.method + ' is not implemented by this server.');
   }
   if (_url = /^\/employees$/i.exec(req.url)) {
     // return a list of employees

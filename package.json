@@ -1,0 +1,31 @@
+{
+  "name": "humanresouces",
+  "version": "1.0.0",
+  "description": "node app",
+  "main": "index.js",
+  "bin": {
+    "humanresouces": "populate_db.js"
+  },
+  "dependencies": {
+    "express": "^4.11.1",
+    "async": "^0.9.0",
+    "colors": "^1.0.3",
+    "mongoose": "^3.8.22",
+    "mongoose-post-find": "^0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "populate": "node ./bin/populate_db"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taras101/humanresources.git"
+  },
+  "author": "Taras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taras101/humanresources/issues"
+  },
+  "homepage": "https://github.com/taras101/humanresources"
+}
