@@ -7,15 +7,20 @@
     "humanresouces": "populate_db.js"
   },
   "dependencies": {
-    "express": "^4.11.1",
     "async": "^0.9.0",
-    "colors": "^1.0.3",
+    "body-parser": "^1.11.0",
+    "cookie-parser": "^1.3.3",
+    "debug": "^2.1.1",
+    "express": "^4.11.1",
     "mongoose": "^3.8.22",
-    "mongoose-post-find": "^0.0.2"
+    "mongoose-post-find": "^0.0.2",
+    "morgan": "^1.5.1",
+    "serve-favicon": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
     "populate": "node ./bin/populate_db"
   },
   "repository": {
