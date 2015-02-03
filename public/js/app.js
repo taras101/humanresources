@@ -1,8 +1,7 @@
 'use strict';
 var app = angular.module('app', ['ngRoute', 'ngResource'])
   .constant('config', {
-    states: ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS',
-    'MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']
+    states: ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']
   });
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -67,22 +66,17 @@ app.directive('imageFallback', function() {
       options = options.replace(attrs.editList, 'editList');
 
       template += '<div class="in-line-value" ng-hide="editing">{{' + displayValue + '}}</div>';
-      template += '<select class="in-line-input form-control" ng-show="editing" ng-model="value" 
-      ng-options="'+ options +'">
-      </select>';
+      template += '<select class="in-line-input form-control" ng-show="editing" ng-model="value" ng-options="'+ options +'"></select>';
 
       break;
     case 'number':
       template += '<div class="in-line-value" ng-hide="editing">{{value}}</div>';
-      template += '<input class="in-line-input form-control" 
-      ng-show="editing" type="number" ng-model="value" step="any" min="0" max="99999" />'
+      template += '<input class="in-line-input form-control" ng-show="editing" type="number" ng-model="value" step="any" min="0" max="99999" />'
 
       break;
     default:
-      template += '<div class="in-line-value" ng-hide="editing">
-      {{value}}</div>';
-      template += '<input class="in-line-input form-control" 
-      ng-show="editing" type="text" ng-model="value" />';
+      template += '<div class="in-line-value" ng-hide="editing">{{value}}</div>';
+      template += '<input class="in-line-input form-control" ng-show="editing" type="text" ng-model="value" />';
     }
 
     // Close the outer div
@@ -114,8 +108,7 @@ app.controller('EmployeesCtrl', ['$scope', 'EmployeeService', function($scope, s
   }, _handleError);
 }]);
 
-app.controller('EmployeeCtrl', ['$scope', '$routeParams', 
-    'EmployeeService', 'TeamService', '$q', 'config', '$route',
+app.controller('EmployeeCtrl', ['$scope', '$routeParams', 'EmployeeService', 'TeamService', '$q', 'config', '$route',
   function($scope, $routeParams, employee, team, $q, config, $route) {
 
     $scope.address = {};
@@ -185,7 +178,7 @@ app.controller('EmployeeCtrl', ['$scope', '$routeParams',
   }
 }]);
 
-app.controller('TeamsCtrl', ['$scope', 'TeamService',function($scope, service) {
+app.controller('TeamsCtrl', ['$scope', 'TeamService', function($scope, service) {
   service.query(function (data) {
     $scope.teams = data;
   }, _handleError);
